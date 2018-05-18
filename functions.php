@@ -12,13 +12,14 @@ function my_theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
+
 /*
 * Creating a function to create our CPT
 */
  
 function custom_post_type() {
  
-// Set UI labels for Custom Post Type
+// Set UI labels for Custom Post Type > Procedures
     $labels = array(
         'name'                => _x( 'Procedures', 'Post Type General Name', 'hestia-child' ),
         'singular_name'       => _x( 'Procedure', 'Post Type Singular Name', 'hestia-child' ),
@@ -36,7 +37,7 @@ function custom_post_type() {
     );
     
 
-// Set other options for Custom Post Type
+// Set other options for Custom Post Type > Procedures
 
      
     $args = array(
@@ -68,10 +69,11 @@ function custom_post_type() {
      
 
 
-    // Registering your Custom Post Type
+    // Registering your Custom Post Type > Procedures
     register_post_type( 'Procedures', $args );
 
 }
+
  
 /* Hook into the 'init' action so that the function
 * Containing our post type registration is not 
